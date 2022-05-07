@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Publico.master.cs" Inherits="Publico" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body bgcolor="#000000">
+    <form id="form1" runat="server">
+    <div class="style1">
+        <br />
+        <asp:ImageButton ID="ImageButton1" runat="server" 
+            ImageUrl="~/logo-bios.png" PostBackUrl="~/Inicio.aspx" />
+        <br />
+        <br />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <br />
+        <br />
+        <asp:Button ID="btnHome" runat="server" PostBackUrl="~/Inicio.aspx" 
+            Text="Inicio" />
+    </div>
+    </form>
+</body>
+</html>

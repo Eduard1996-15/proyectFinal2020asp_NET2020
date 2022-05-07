@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Login.master.cs" Inherits="Login" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style3
+        {
+            text-align: center;
+        }
+        .style5
+        {
+            color: #FFFFFF;
+        }
+        .style6
+        {
+            color: #FFFFFF;
+            font-size: x-large;
+        }
+        .style7
+        {
+            width: 100%;
+        }
+        </style>
+</head>
+<body bgcolor="#000000" link="#ffffff">
+    <form id="form1" runat="server">
+    <div class="style3">
+        <br />
+        <asp:ImageButton ID="ImageButton1" runat="server" 
+            ImageUrl="~/logo-bios.png" PostBackUrl="~/Inicio.aspx" />
+        <br />
+        <br />
+                <strong><em>
+                <asp:Label ID="lblData" runat="server" CssClass="style5" 
+            Text="Empleado actual:  "></asp:Label>
+                <asp:Label ID="lblNombre" runat="server" CssClass="style5" Text="Label"></asp:Label>
+                <br />
+                </em></strong>
+                    <table align="center" class="style7">
+                        <tr>
+                            <td class="style3">
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#F7F6F3" CssClass="style6" 
+                        DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="X-Large" 
+                        ForeColor="#7C6F57" MaximumDynamicDisplayLevels="2" 
+                        StaticSubMenuIndent="10px" ClientIDMode="Static" 
+            RenderingMode="Table" Orientation="Horizontal">
+                        <DynamicHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicMenuStyle BackColor="#F7F6F3" />
+                        <DynamicSelectedStyle BackColor="#5D7B9D" />
+                        <Items>
+                            <asp:MenuItem Text="Entidades" Value="Entidades">
+                                <asp:MenuItem NavigateUrl="~/MantEntidad.aspx" Text="Mantenimiento entidades" 
+                                    Value="Mantenimiento entidades"></asp:MenuItem>
+                                <asp:MenuItem Text="Tipo de tramite" Value="Tipo de tramite" 
+                                    NavigateUrl="~/TipodeTramite.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Registrar solicitud" Value="Registrar solicitud" 
+                                    NavigateUrl="~/RegistrarSolicitud.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/CambioEstadoSolicitud.aspx" 
+                                    Text="Cambiar estado de una solicitud" Value="Cambiar estado de una solicitud">
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Solicitudes por fecha" Value="Solicitudes por fecha" 
+                                    NavigateUrl="~/SolicitudPorFecha.aspx">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/EstadoSolicitud.aspx" Text="Estado de solicitudes" 
+                                    Value="Estado de solicitudes"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Empleados" Value="Empleados" NavigateUrl="~/Empleados.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Bienvenida.aspx" Text="Menu Principal" 
+                                Value="Menu Principal"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BackColor="#7C6F57" ForeColor="White" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticSelectedStyle BackColor="#5D7B9D" />
+                    </asp:Menu>
+                            </td>
+                        </tr>
+        </table>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p class="style3">
+                <div class="style3">
+                <br />
+                </div>
+            </p>
+        
+        </asp:ContentPlaceHolder>
+        <em>
+                <asp:Label ID="lblError" runat="server" CssClass="style5" Text="Label"></asp:Label>
+                </em>
+        <br />
+        
+        <asp:Button ID="btnHome" runat="server" Text="Logout" 
+            PostBackUrl="~/Inicio.aspx" />
+        
+        <br />
+    </div>
+    </form>
+</body>
+</html>
